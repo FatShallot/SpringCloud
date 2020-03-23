@@ -19,6 +19,8 @@
         <module>Hystrix</module>
         <module>NativeConfigServer</module>
         <module>NativeConfigClient</module>
+        <module>RemoteConfigServer</module>
+        <module>RemoteConfigClient</module>
     </modules>
 
     <!--引入父依赖-->

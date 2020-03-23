@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    # 配置文件的名字
+    # 这个名字还会作为服务的名字注册到eureka server上
+    config:
+      name: configclient
+      # 配置文件位于哪一个分支
+      label: master
+      # 开启config服务发现的支持
+      discovery:
+        enabled: true
+        # config server的id，也就是注册在eureka上的那个名字
+        service-id: config-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

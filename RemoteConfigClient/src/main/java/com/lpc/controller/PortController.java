@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/native")
+@RequestMapping("/remote")
 public class PortController {
     @Value("${server.port}")
     private String port;
@@ -15,4 +15,5 @@ public class PortController {
     public String getPort() {
         return port;
     }
+
 }

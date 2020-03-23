@@ -1,0 +1,24 @@
+server:
+  port: 35000
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          # 配置文件所在的远程仓库
+          uri: https://github.com/FatShallot/SpringCloud.git
+          # 登录远程仓库需要的用户名和密码
+          username: root
+          password: root
+          # 配置文件在远程仓库中的路径
+          search-paths: config
+      # 位于哪一个分支
+      label: master
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
