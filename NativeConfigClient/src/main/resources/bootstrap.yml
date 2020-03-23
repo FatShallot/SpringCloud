@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: configclient
+  # profiles.active用于多环境（开发、测试、生产）配置
+  # application.name和profiles.active加在一起，就是要找到的yml文件名
+  # 在这里就是configclient-dev.yml
+  profiles:
+    active: dev
+  cloud:
+    config:
+      uri: http://localhost:34000
+      # 设置客户端优先判断config server是否正常
+      fail-fast: true

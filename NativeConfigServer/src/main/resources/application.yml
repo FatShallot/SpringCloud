@@ -1,0 +1,15 @@
+server:
+  port: 34000
+spring:
+  application:
+    name: native-config-server
+  # 配置文件的位置，指定到目录就可以
+  cloud:
+    config:
+      server:
+        native:
+          # 别忘了这个斜杠
+          search-locations: classpath:/config
+  # 配置文件的获取方式，native表示从本地获取
+  profiles:
+    active: native

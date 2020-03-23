@@ -1,0 +1,3 @@
+# 注意这个文件是给其他服务加载用的，文件名已经不能叫application.yml了
+server:
+  port: 23000

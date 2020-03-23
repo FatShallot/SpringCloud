@@ -1,0 +1,15 @@
+server:
+  port: 30000
+spring:
+  application:
+    name: gateway
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+zuul:
+  routes:
+    # 将服务名为provider的服务配置映射为/p/**
+    # 这样一来，/p/**的请求就回去找provider
+    # http://localhost:30000/p/provider/student/3可以访问http://localhost:21000/provider/student/3
+    provider: /p/**
