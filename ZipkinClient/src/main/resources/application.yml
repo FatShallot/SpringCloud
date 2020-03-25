@@ -1,0 +1,22 @@
+server:
+  port: 25000
+spring:
+  application:
+    name: zipkin-client
+  sleuth:
+    # zipkin采样比例
+    sampler:
+      probability: 1.0
+    # 启动监控
+    web:
+      client:
+        enabled: true
+  # zipkin server地址
+  zipkin:
+    base-url: http://localhost:36000/
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true

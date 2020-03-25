@@ -21,6 +21,8 @@
         <module>NativeConfigClient</module>
         <module>RemoteConfigServer</module>
         <module>RemoteConfigClient</module>
+        <module>ZipkinServer</module>
+        <module>ZipkinClient</module>
     </modules>
 
     <!--引入父依赖-->
